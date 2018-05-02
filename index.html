@@ -3,54 +3,31 @@
 
 	<head></head>
 	<link rel="stylesheet" type="text/css" href="screen.css">
-	<title>H.OS - Login</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
+	<title>H.OS</title>
 
 	<body>
 		    <div class="wallpaper">
-			            <input id="user" type="text">
-				           <input id="ps" type="password">
-					        </div>
-							<!--Scroll Down-->
-							
+			    	<h1 id="hos">H.OS</h1>
+			            <input id="user" type="text" autofocus>
+			           <input id="ps" type="password">
+				   <a id="login" href="#login?">Login</a>
+	            </div>
 	</body>
-	<h1 class="ws" style="font-weight:lighter">Welcome to H.OS</h1>
-	<p class="tis2" style="font-weight:lighter">Welcome, Please sign in. If you do not have an account... Too Bad
-	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
-    </script>
+	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	    <script src="en.txt"></script>
         <script>
 $(document).ready(function() {
-
     document.getElementById("user").placeholder = "Username : ";
     document.getElementById("ps").placeholder = "Password : ";
-
-  $("#ps").on('keyup', function(e) {
-        if (e.keyCode == 13) {
-          var txt = document.getElementById('user').value
-          var ps = document.getElementById('ps').value
-                    if (txt == "sam" & ps == "test") {
-		                        window.open("Desktop-Usr=sam.html", "_self")
-	                  }
-					if (txt == "ashton" & ps == "Password1") {
-						window.open("Desktop-Usr=Ashton.html", "_self")
-					}
-              }
-        });
-
-  $("#demo2").on('keyup', function(e) {
-    if (e.keyCode == 13) {
-        var txt2 = document.getElementById('demo2').value
-            if (txt2 == "sheep") {
-            $('.wallpaper').fadeTo('slow', 0.3, function() {
-                        $("#demo2").val("");
-                            $(this).css("background-image", "url('back.jpg')");
-			                            }).delay(500).fadeTo('slow', 1);
-
-              }
-      }
-    });
-
+	  				
+	$('#login').click(function(){
+    		var txt = document.getElementById('user').value;
+    		var ps = document.getElementById('ps').value;
+		if (txt == 'sam' & ps == fac){
+		                   window.open("Desktop-Usr=sam.html", "_self")
+		}
+	});
     });
 </script>
-	</p>
-
 </html>

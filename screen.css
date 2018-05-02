@@ -2,7 +2,7 @@
     border: none;
     margin: 0;
     padding: 0;
-    font-family: "Avenir Next", sans-serif
+    font-family: 'Raleway', sans-serif;
 }
 
 .wallpaper {
@@ -36,32 +36,32 @@
     outline: none;
     color: white
 }
-
-.wallpaper #user {
-    width: 700px;
-    outline: none;
-    background: none;
-    font-size: 60px;
-    color: white;
-    letter-spacing: 2px;
-    display: block;
-    line-height: 30px;
-    list-style-type: none;
-    text-decoration: none;
-    font-weight: 200
+#hos{
+	font-weight:400;
+	font-size:60px;
+	margin-bottom:30px;
+	color:#ffffff52;
 }
-.wallpaper #ps {
-    width: 700px;
+.wallpaper input {
+    width: 600px;
     outline: none;
     background: none;
-    font-size: 60px;
+    border:2px solid #ffffff17;
+    margin-bottom:10px;
+    font-size: 25px;
     color: white;
     letter-spacing: 2px;
     display: block;
     line-height: 30px;
     list-style-type: none;
+    padding:15px;
+    padding-left:25px;
+    border-radius:30px;
     text-decoration: none;
-    font-weight: 200
+    transition:all 0.3s;
+}
+input::placeholder{
+	color:#ffffff52;
 }
 .ws {
     margin-top: 20px;
@@ -75,4 +75,14 @@
 .tis2 {
     margin-left: 20px;
     margin-bottom: 40px
+}
+.wallpaper a {
+	color:#42a750;
+	border-radius:30px;
+	box-shadow:0px 0px 25px rgba(0,0,0,0.4);
+	text-decoration:none;
+	background-color:#90909014;
+	padding:17px 50px;
+	font-size:22px;
+	margin-top:20px;
 }
