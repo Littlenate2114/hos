@@ -1,1 +1,41 @@
-<!DOCTYPE html><html manifest="web.appcache"><head></head><link rel="stylesheet" type="text/css" href="screen.css"><title>H.OS</title><body><div class="wallpaper"><input id="demo" type="text"><input id="demo2" type="text" style="margin-bottom:20px;font-weight:lighter;font-size:14px" placeholder="H.OS"></div></body><h1 class="ws" style="font-weight:lighter">Usage</h1><p class="tis2" style="font-weight:lighter">Type the main name of the domain. e.g. https://www.google.com just type google and I do the rest!<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">  </script><script src="script.js"></script></p></html>
+<!DOCTYPE html><html manifest="web.appcache"><head></head><link rel="stylesheet" type="text/css" href="screen.css"><title>H.OS</title><body><div class="wallpaper"><input id="demo" type="text"><input id="demo2" type="text" style="margin-bottom:20px;font-weight:lighter;font-size:14px" placeholder="H.OS"></div></body><h1 class="ws" style="font-weight:lighter">Usage</h1><p class="tis2" style="font-weight:lighter">Type the main name of the domain. e.g. https://www.google.com just type google and I do the rest!<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">  </script><script>$(document).ready(function(){
+  var today = new Date()
+  var curHr = today.getHours()
+
+  if (curHr < 12) {
+    document.getElementById("demo").placeholder = "Good Morning Sam";
+  } else if (curHr < 18) {
+    document.getElementById("demo").placeholder = "Good Afternoon Sam";
+  } else {
+    document.getElementById("demo").placeholder = "Good Afternoon Sam";
+  }
+
+  $("#demo").on('keyup', function(e) {
+      if (e.keyCode == 13) {
+          var txt = document.getElementById('demo').value
+
+          window.open("http://www." + $("#demo").val() + ".com", "_self")
+
+
+          if (txt == "mes") {
+            window.open("https://web.whatsapp.com/", "_self")
+          }
+        }
+  });
+
+  $("#demo2").on('keyup', function(e) {
+    if (e.keyCode == 13) {
+      var txt2 = document.getElementById('demo2').value
+      if (txt2 == "sheep") {
+        $('.wallpaper').fadeTo('slow', 0.3, function()
+        {
+            $("#demo2").val("");
+            $(this).css("background-image", "url('back.jpg')");
+        }).delay(500).fadeTo('slow', 1);
+
+      }
+    }
+  });
+
+});
+</script></p></html>
