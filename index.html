@@ -1,4 +1,4 @@
-A:<!DOCTYPE html>
+<!DOCTYPE html>
 <html manifest="web.appcache">
 
 	<head></head>
@@ -11,27 +11,42 @@ A:<!DOCTYPE html>
 			    	<h1 id="hos">H.OS</h1>
 			            <input id="user" type="text" autofocus>
 			           <input id="ps" type="password">
-				   <a id="login" href="#login?">Login</a>
-				   <a id="Sign Up" href="Sign_Up.html">Sign Up</a>
+									 <p id="wrong" style="color:#b93f3fa3;font-weight:400;margin-top:10px;letter-spacing:1px;font-size:18px;">Invalid Username or Password</p>
+								 <div class="login-btns">
+									 <a id="login" href="#login?">Login</a>
+									 <a id="Sign Up" href="Sign_Up.html">Register</a>
+								 </div>
 	            </div>
 	</body>
 	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	    <script src="en.txt"></script>
+			<script src="en1.txt"></script>
         <script>
 $(document).ready(function() {
+		$('#wrong').hide();
     document.getElementById("user").placeholder = "Username : ";
     document.getElementById("ps").placeholder = "Password : ";
-	  				
-	$('#login').click(function(){
+		var enc_key = "d6*F545loginu0&^%password$sdI3a9a8url=Desktop-Usr=sam.html&Dg9bQ";
+		var dec_key = "Ayroot*$folderu&yt#gsk@pass=6sd8ai8h%*FD*(FSD#Q#P(FS@)";
+		var enc_key1 = "ad87fysd0fjakdD&FS^DF$&SD*F^SD^DFSurl=Desktop-Usr=Ashton.html&Dg9bQ"
+		var dec_key1 = "IUDYFG^&S(D%FS*^DF90yfdifdja87d666d6sadfc0x0xx000)"
+		$("#ps").on('keyup', function(e) {
+	    if (e.keyCode == 13) {
     		var txt = document.getElementById('user').value;
     		var ps = document.getElementById('ps').value;
-		if (txt == 'sam' & ps == fac){
+				sam_password = enc_key + ps + dec_key;
+				ashton_password = enc_key1 + ps + dec_key1;
+
+		if (txt == 'sam' & sam_password == usenc){
 		                   window.open("Desktop-Usr=sam.html", "_self")
+		}else{
+			$('#wrong').slideDown();
 		}
-		if (txt == 'ashton' & ps == "Password1"){
-							window.open("Desktop-Usr=Ashton.html", "_self")
+		if (txt == 'ashton' & ashton_password == uaenc){
+							window.open("Desktop-Usr=ashton.html", "_self")
 		}
-	});
+	      }
+	  });
     });
 </script>
 </html>
