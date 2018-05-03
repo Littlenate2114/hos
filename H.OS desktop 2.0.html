@@ -9,19 +9,59 @@
 
 
 
-<!--Search-->
-<body>
-    <div class="wallpaper">
-        <h1 style="margin-bottom:20px;font-weight:lighter;font-size:14px">H.OS</h1>
-        <input id="demo" type="text">
-    </div>
-</body>
+<!DOCTYPE html>
 
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous">
-    </script>
-    <script src="SearchScript.js"></script>
-</p>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
 
 
-</body>
-</html>
+    <meta charset="utf-8" />
+    <title>H.OS Desktop</title>
+
+<!--Background Image-->
+	<style>
+body {
+    background-image: url("AshtonBG.jpg");
+    background-color: #ffffff;
+}
+</style>
+
+<!--Clock-->
+<center>
+<script>
+allign= "left"
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m + ":" + s;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+<body onload="startTime()">
+
+<div id="txt"></div>
+</center>
+<!--Log Out Button-->
+
+<a href="index.html"><button>Sign Out</button></a>
+
+
+<!--Welcome Text-->
+<h1>
+<center>
+Welcome Back, Ashton
+</center>
+</h1>
+
+
