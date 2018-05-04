@@ -86,3 +86,9 @@ input::placeholder{
 	font-size:22px;
 	margin-top:20px;
 }
+.login-btns{
+  display: flex;
+}
+.login-btns a:first-child{
+  margin-right: 10px;
+}
