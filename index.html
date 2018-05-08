@@ -1,116 +1,207 @@
-
 <!DOCTYPE html>
-<html manifest="web.appcache">
 
-	<head></head>
-	<link rel="stylesheet" type="text/css" href="screen.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
-	<title>H.OS</title>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Sam's Desktop</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
-	<body>
-		    <div class="wallpaper">
-			    	<h1 id="hos">H.OS</h1>
-			            <input id="user" type="text" autofocus>
-			           <input id="ps" type="password">
-									 <p id="wrong" style="color:#b93f3fa3;font-weight:400;margin-top:10px;letter-spacing:1px;font-size:18px;">Invalid Username or Password</p>
-								 <div class="login-btns">
-									 <a id="login" href="#login?">Login</a>
-									 <a id="Sign Up" href="Sign_Up.html">Register</a>
-								 </div>
-	            </div>
-	</body>
-	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	    <script src="en.txt"></script>
-			<script src="en1.txt"></script>
-        <script>
-$(document).ready(function() {
-		$('#wrong').hide();
-    document.getElementById("user").placeholder = "Username : ";
-    document.getElementById("ps").placeholder = "Password : ";
-		var enc_key = "d6*F545loginu0&^%password$sdI3a9a8url=Desktop-Usr=sam.html&Dg9bQ";
-		var dec_key = "Ayroot*$folderu&yt#gsk@pass=6sd8ai8h%*FD*(FSD#Q#P(FS@)";
-		var enc_key1 = "ad87fysd0fjakdD&FS^DF$&SD*F^SD^DFSurl=Desktop-Usr=Ashton.html&Dg9bQ"
-		var dec_key1 = "IUDYFG^&S(D%FS*^DF90yfdifdja87d666d6sadfc0x0xx000)"
-		$("#ps").on('keyup', function(e) {
-	    if (e.keyCode == 13) {
-    		var txt = document.getElementById('user').value;
-    		var ps = document.getElementById('ps').value;
-				sam_password = enc_key + ps + dec_key;
-				ashton_password = enc_key1 + ps + dec_key1;
-
-		if (txt == 'sam' & sam_password == usenc){
-		                   window.open("Desktop-Usr=sam.html", "_self")
-		}else{
-			$('#wrong').slideDown();
-		}
-		if (txt == 'ashton' & ashton_password == uaenc){
-							window.open("Desktop-Usr=Ashton.html", "_self")
-		}else{
-			$('#wrong').slideDown();
-
-	      }
-	  });
+</head>
+<body>
+  <div class="nav">
+      <h1 id="txt">Welcome Sam</h1>
+  </div>
+      <div id="tabs">
+  <ul>
+    <li><a href="#tabs-1" style="padding-left:10px;">1</a></li>
+    <li><a href="#tabs-2">2</a></li>
+    <li><a href="#tabs-3">3</a></li>
+  </ul>
+  <div id="tabs-1" style="display:flex;">
+	  <webview id="foo" src="https://google.com" style="margin-right: 10px;display:inline-flex; width:50%; height:100%"></webview>
+	  <webview id="foo" src="https://google.com" style="display:inline-flex; width:50%; height:100%"></webview>
+  </div>
+  <div id="tabs-2">
+  </div>
+  <div id="tabs-3">
+  </div>
+</div>
+<div class="lock">
+  <input type="password" id="locked" placeholder="Sam's Password :" autofocus>
+</div>
+</body>
+<style media="screen">
+.lock{
+  background-color:rgba(12, 12, 12, 0.97);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.lock input{
+  color:white;
+  font-weight: 300;
+  font-size: 60px;
+  background-color: transparent;
+  border:none;
+  outline:none;
+}
+#tabs-1{
+	width:98.5%;
+	height:95vh;
+  position: relative;
+  top: 20px;
+	margin-top:0px;
+  margin:10px;
+	box-shadow:0px 0px 25px rgba(0,0,0,0.4);
+	box-sizing:border-box;
+}
+#tabs a{
+	color:white;
+	text-decoration:none;
+	padding:3px 15px;
+    font-size: 13px;
+    font-weight: 400;
+}
+#tabs ul{
+	color:white;
+	z-index:99999;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+ #tabs ul li {
+ display:inline;
+ }
+  .window-area{
+    width: 100%;
+    height: 100%;
+    margin-top: 26px;
+    overflow: hidden;
+    padding:5px;
+    box-sizing: border-box;
+  }
+  *{
+    margin:0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    outline:none;
+  }
+  .title{
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fbfbfb;
+    border-top-left-radius: 3px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-right-radius: 3px;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .title #close{
+    float: right;
+    transform: scale(1, 0.8);
+  }
+  .title #title{
+    float: left;
+  }
+  .window h1{
+    font-weight: 300;
+    font-size: 60px;
+  }
+  .window{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    position: relative;
+  }
+  #txt{
+    color:white;
+    font-size: 13px;
+    float: right;
+    font-weight: 400;
+  }
+  body{
+    background-image: url('https://source.unsplash.com/random');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .nav{
+    width:100%;
+    height: auto;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5); */
+    overflow:auto;
+  }
+</style>
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script>if (window.module) module = window.module;</script>
+<script>
+$( "#tabs" ).tabs();
+const webview = document.querySelector('webview')
+webview.addEventListener('new-window', function (e) {
+        webview.src = e.url;
     });
+$(document).keydown(function(e) {
+	if(e.which == 112) {
+    $('#tabs').tabs( "option", "active", 0 );
+  }
+	if(e.which == 113) {
+    $('#tabs').tabs( "option", "active", 1 );
+  }
+	if(e.which == 114) {
+    $('#tabs').tabs( "option", "active", 2 );
+  }
+	if(e.which == 220) {
+    $(".lock").slideDown(400);
+		}
+	if(e.which == 219) {
+		webview.goBack();
+		}
+	if(e.which == 221) {
+		webview.goForward();
+		}
+	});
+$(document).ready(function(){
+  $("#locked").keydown(function(e) {
+  	if(e.which == 13) {
+      if($("#locked").val() == "toor"){
+      $(".lock").slideUp(400);
+      $("#locked").val('');
+      }
+    }
+  });
+});
+// window.setInterval(function(){
+//     var time = new Date();
+//     document.getElementById('txt').innerHTML =  time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+// }, 1000);
 </script>
 </html>
-=======
-<!DOCTYPE html>
-<html manifest="web.appcache">
-
-	<head></head>
-	<link rel="stylesheet" type="text/css" href="screen.css">
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,800" rel="stylesheet">
-	<title>H.OS</title>
-
-	<body>
-		    <div class="wallpaper">
-			    	<h1 id="hos">H.OS</h1>
-			            <input id="user" type="text" autofocus>
-			           <input id="ps" type="password">
-									 <p id="wrong" style="color:#b93f3fa3;font-weight:400;margin-top:10px;letter-spacing:1px;font-size:18px;">Invalid Username or Password</p>
-								 <div class="login-btns">
-									 <a id="login" href="#login?">Login</a>
-									 <a id="Sign Up" href="Sign_Up.html">Register</a>
-								 </div>
-	            </div>
-	</body>
-	    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	    <script src="en.txt"></script>
-			<script src="en1.txt"></script>
-        <script>
-$(document).ready(function() {
-		$('#wrong').hide();
-    document.getElementById("user").placeholder = "Username : ";
-    document.getElementById("ps").placeholder = "Password : ";
-		var enc_key = "d6*F545loginu0&^%password$sdI3a9a8url=Desktop-Usr=sam.html&Dg9bQ";
-		var dec_key = "Ayroot*$folderu&yt#gsk@pass=6sd8ai8h%*FD*(FSD#Q#P(FS@)";
-		var enc_key1 = "ad87fysd0fjakdD&FS^DF$&SD*F^SD^DFSurl=Desktop-Usr=Ashton.html&Dg9bQ"
-		var dec_key1 = "IUDYFG^&S(D%FS*^DF90yfdifdja87d666d6sadfc0x0xx000)"
-		$("#ps").on('keyup', function(e) {
-	    if (e.keyCode == 13) {
-    		var txt = document.getElementById('user').value;
-    		var ps = document.getElementById('ps').value;
-				sam_password = enc_key + ps + dec_key;
-				ashton_password = enc_key1 + ps + dec_key1;
-
-		if (txt == 'sam' & sam_password == usenc){
-		                   window.open("Desktop-Usr=sam.html", "_self")
-		}else{
-			$('#wrong').slideDown();
-		}
-		if (txt == 'ashton' & ashton_password == uaenc){
-							window.open("Desktop-Usr=Ashton.html", "_self")
-			}else{
-			$('#wrong').slideDown();
-		}
-		if (txt == 'Beta' & tester_password == utenc){
-							window.open("Desktop-Usr=Ashton.html", "_self")
-			}else{
-			$('#wrong').slideDown();
-		}
-	      }
-	  });
-    });
-</script>
-</html>
->>>>>>> 67f0062f597751ac825e3c2db71eaa1021c6123d

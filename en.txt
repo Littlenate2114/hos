@@ -1,3 +1,0 @@
-let usenc = `d6*F545loginu0&^%password$sdI3a9a8url=Desktop-Usr=sam.html&Dg9bQtoor9812Ayroot*$folderu&yt#gsk@pass=6sd8ai8h%*FD*(FSD#Q#P(FS@)`;
-let uaenc = `ad87fysd0fjakdD&FS^DF$&SD*F^SD^DFSurl=Desktop-Usr=Ashton.html&Dg9bQf@KD3!XjGrIUDYFG^&S(D%FS*^DF90yfdifdja87d666d6sadfc0x0xx000)`;
-let utenc = `ad87fysd0fjakdD&FS^DF$&SD*F^SD^DFSurl=Desktop-Usr=Ashton.html&Dg9bQRosellame1IUDYFG^&S(D%FS*^DF90yfdifdja87d666d6sadfc0x0xx000)`;
