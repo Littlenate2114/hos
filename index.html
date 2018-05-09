@@ -159,10 +159,8 @@
     overflow:auto;
   }
 </style>
-<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery-ui.js"></script>
-<script>if (window.module) module = window.module;</script>
 <script>
 $( "#tabs" ).tabs();
 const webview = document.querySelector('webview')
@@ -199,9 +197,9 @@ $(document).ready(function(){
     }
   });
 });
-// window.setInterval(function(){
-//     var time = new Date();
-//     document.getElementById('txt').innerHTML =  time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-// }, 1000);
+window.setInterval(function(){
+    var time = new Date();
+    document.getElementById('txt').innerHTML =  time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+}, 1000);
 </script>
 </html>
