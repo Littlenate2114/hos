@@ -1,205 +1,28 @@
 <!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <title>Sam's Desktop</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
-</head>
-<body>
-  <div class="nav">
-      <h1 id="txt">Welcome Sam</h1>
-  </div>
-      <div id="tabs">
-  <ul>
-    <li><a href="#tabs-1" style="padding-left:10px;">1</a></li>
-    <li><a href="#tabs-2">2</a></li>
-    <li><a href="#tabs-3">3</a></li>
-  </ul>
-  <div id="tabs-1" style="display:flex;">
-	  <webview id="foo" src="https://google.com" style="margin-right: 10px;display:inline-flex; width:50%; height:100%"></webview>
-	  <webview id="foo" src="https://google.com" style="display:inline-flex; width:50%; height:100%"></webview>
-  </div>
-  <div id="tabs-2">
-  </div>
-  <div id="tabs-3">
-  </div>
-</div>
-<div class="lock">
-  <input type="password" id="locked" placeholder="Sam's Password :" autofocus>
-</div>
-</body>
-<style media="screen">
-.lock{
-  background-color:rgba(12, 12, 12, 0.97);
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top:0px;
-  left: 0px;
-  z-index: 99999999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-}
-.lock input{
-  color:white;
-  font-weight: 300;
-  font-size: 60px;
-  background-color: transparent;
-  border:none;
-  outline:none;
-}
-#tabs-1{
-	width:98.5%;
-	height:95vh;
-  position: relative;
-  top: 20px;
-	margin-top:0px;
-  margin:10px;
-	box-shadow:0px 0px 25px rgba(0,0,0,0.4);
-	box-sizing:border-box;
-}
-#tabs a{
-	color:white;
-	text-decoration:none;
-	padding:3px 15px;
-    font-size: 13px;
-    font-weight: 400;
-}
-#tabs ul{
-	color:white;
-	z-index:99999;
-	position:absolute;
-	top:0px;
-	left:0px;
-}
- #tabs ul li {
- display:inline;
- }
-  .window-area{
-    width: 100%;
-    height: 100%;
-    margin-top: 26px;
-    overflow: hidden;
-    padding:5px;
-    box-sizing: border-box;
-  }
-  *{
-    margin:0px;
-    padding: 0px;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    outline:none;
-  }
-  .title{
-    width: 100%;
-    overflow: auto;
-    padding: 10px;
-    box-sizing: border-box;
-    background-color: #fbfbfb;
-    border-top-left-radius: 3px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    border-top-right-radius: 3px;
-    border-bottom: 1px solid #e6e6e6;
-  }
-  .title #close{
-    float: right;
-    transform: scale(1, 0.8);
-  }
-  .title #title{
-    float: left;
-  }
-  .window h1{
-    font-weight: 300;
-    font-size: 60px;
-  }
-  .window{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width:100%;
-    height: 100%;
-    background-color: white;
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
-    position: relative;
-  }
-  #txt{
-    color:white;
-    font-size: 13px;
-    float: right;
-    font-weight: 400;
-  }
-  body{
-    background-image: url('https://source.unsplash.com/random');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  .nav{
-    width:100%;
-    height: auto;
-    padding: 3px;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    /* box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5); */
-    overflow:auto;
-  }
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="jquery-ui.js"></script>
-<script>
-$( "#tabs" ).tabs();
-const webview = document.querySelector('webview')
-webview.addEventListener('new-window', function (e) {
-        webview.src = e.url;
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  </head>
+  <body>
+      <div class="hero">
+        <div class="time">
+            <input id="pass" type="password" autofocus placeholder="Type Password To Unlock :">
+            <h1>7:16PM</h1>
+            <h1 id="msg">Afternoon Sam</h1>
+        </div>
+      </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('#pass').keypress(function (e) {
+          if (e.which == 13) {
+            $('.hero').slideUp(350);
+          }
+        });
     });
-$(document).keydown(function(e) {
-	if(e.which == 112) {
-    $('#tabs').tabs( "option", "active", 0 );
-  }
-	if(e.which == 113) {
-    $('#tabs').tabs( "option", "active", 1 );
-  }
-	if(e.which == 114) {
-    $('#tabs').tabs( "option", "active", 2 );
-  }
-	if(e.which == 220) {
-    $(".lock").slideDown(400);
-		}
-	if(e.which == 219) {
-		webview.goBack();
-		}
-	if(e.which == 221) {
-		webview.goForward();
-		}
-	});
-$(document).ready(function(){
-  $("#locked").keydown(function(e) {
-  	if(e.which == 13) {
-      if($("#locked").val() == "toor"){
-      $(".lock").slideUp(400);
-      $("#locked").val('');
-      }
-    }
-  });
-});
-window.setInterval(function(){
-    var time = new Date();
-    document.getElementById('txt').innerHTML =  time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-}, 1000);
-</script>
+  </script>
 </html>
