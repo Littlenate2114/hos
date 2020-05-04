@@ -1,2 +1,2 @@
-# H.OS
-Welcome to H.OS, The #1 web based operating system. This operating system comes packed with UNLIMITED online storage and open source code.
+# HOS
+Welcome to HOS, the #1 open source browser homepage for ease of use and security. with a secure IP based login system only YOU can access your information.
