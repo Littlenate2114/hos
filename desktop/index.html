@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="master.css" type="text/css">
+		<title>HOS</title>
+	</head>
+	<body>
+		<div class="container">
+		<div class="nav">
+			<div class="left">
+				<p id="con"></p>
+				<p style="color:white;" id="bar">|</p>
+				<p style="color:white;">HOS</p>
+			</div>
+			<p id="time"></p>
+		</div>
+		<div class="command">
+			<input spellcheck="false" type="text" placeholder="Type Command >" />
+		</div>
+		<div class="music-player">
+			<div class="titlebar">
+				<p>Groups</p>
+			</div>
+			<select name="cars"class="content" multiple>
+			  <option value="vib">1.twitch</option>
+			  <option value="pulse">2.School</option>
+			</select>
+		</div>
+		<div class="list">
+			<div class="titlebar">
+				<p>Application</p>
+			</div>
+			<iframe src="https://litchatapp.herokuapp.com" height="100%" width="50%"></iframe>
+		</div>
+		<div class="scanner">
+			<div class="titlebar">
+				<p>Select Application</p>
+			</div>
+			<select name="cars"class="content" multiple>
+				<option value="vib">Litchat</option>
+			  <option value="pulse">YouTube Music</option>
+			</select>
+		</div>
+		</div>
+		<div class="hidden"></div>
+	</body>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="../jquery.cookie.js"></script>
+	<script charset="utf-8">
+		$.get("http://ipinfo.io", function(response) {
+		var meip = response.ip
+		console.log(meip);
+		if(meip.startsWith("218.214.219.38")){
+			$("#con").text("Welcome: Adsnipers");
+			$("#con").css('color', 'green');
+		}else if (meip.startsWith("1.1.1.1")){
+			$("#con").text("Welcome: CloudFlare");
+			$("#con").css('color', 'green');
+		} else {
+			$("#con").text("unauthorized User");
+			$("#con").css('color', 'red');
+		}
+		}, "jsonp");
+		$(".command").hide();
+		$("body").keyup(function(event) {
+			if (event.keyCode === 192) {
+				window.location.href = 'https://bing.com';
+			}
+			if (event.keyCode === 27) {
+				$(".command").hide();
+				$(".command input").val("");
+			}
+			});
+		setInterval(function(){
+			var d = new Date();
+			var time = d.toString();
+			var nd = time.slice(0, 24);
+			$("#time").text(nd);
+		}, 1000);
+	</script>
+</html>
