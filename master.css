@@ -69,6 +69,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
   background-color: black;
   position: relative;
 }
-@media screen and (max-width: 720;) {
-
+@media screen and (orientation:portrait) {
+  body {
+    display: none;
+  }
 }
