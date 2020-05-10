@@ -1,0 +1,56 @@
+* {
+  background-color: white;
+  font-family: arial;
+}
+
+#desktop {
+  background-image: url('../background.jpg');
+  width: 100%;
+  height: 100vh;
+}
+
+#taskbar {
+  text-decoration: none;
+}
+#taskbar {
+  position: absolute;
+  bottom: -1.5%;
+  left: -0.5%;
+  display: flex;
+  background-color: rgba(153, 153, 153, 0.7);
+  list-style-type: none;
+  padding: 0.5%;
+  padding-right: 3%;
+  border-radius: 10px;
+  margin-left: 1%;
+}
+#taskbar li {
+  background-color: rgba(0, 0, 0, 0.0);
+  padding-left: 15%;
+}
+#taskbar #startbutton {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+}
+#taskbar #startbutton:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transition-duration: 0.5s;
+}
+#taskbar #spacer {
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-left: 10px;
+  padding: 1px;
+}
+#taskbar #help {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  margin-left: 10px
+}
+#taskbar #help:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transition-duration: 0.5s;
+}

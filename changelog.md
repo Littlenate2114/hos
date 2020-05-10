@@ -1,4 +1,4 @@
 # HOS
 ## Changelog
-### v1.0.0
-Project changes unknown below this point
+### v0.1.0
+HOS Initial Publish - Alpha 1
