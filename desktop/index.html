@@ -1,30 +1,40 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>HOS</title>
-    <link rel="stylesheet" href="../css/desktop.css">
-    <script src="desktop.js"></script>
-  </head>
-  <body style="margin:0;" onload="getTime()">
-    <div id="desktop">
 
+<head>
+  <meta charset="utf-8">
+  <title>HOS</title>
+  <link rel="stylesheet" href="../css/master.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+
+<body id="bod">
+  <div class="hero">
+    <div class="time">
+      <h1 id="time">HH:MMAP</h1>
+      <h1 id="msg">Welcome To HOS</h1>
     </div>
-    <nav>
-      <ul id="taskbar1left">
-        <li id="startbutton" onclick="OpenStart()"></li>
-        <li id="spacer"></li>
-        <li id="help"></li>
-      </ul>
-      <ul id="taskbar1right">
-        <li id="clock"></li>
-        <li id="notifications"></li>
-      </ul>
-    </nav>
-    <section id="startmenu">
-        <ul id="contents">
-          <li id="twitch"><img src="icons/twitch.png"></img></li>
-        </ul>
-    </section>
-  </body>
+  </div>
+  <div class="loged">
+    <iframe id="desktop" src="" width="100%" height="100%"></iframe>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://bitwiseshiftleft.github.io/sjcl/sjcl.js"></script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    setInterval(function () {
+      var d = new Date();
+      var time = d.toLocaleString('en-US', {
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: true
+      })
+      $("#time").text(time);
+    }, 1000);
+  });
+</script>
+
 </html>

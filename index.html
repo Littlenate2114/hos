@@ -41,7 +41,7 @@
           } else if (this.value == ALogin) {
           $('.hero').fadeOut(400);
           $("#pass").val('');
-          $("#desktop").attr("src", "desktop/index.html");
+          $("#desktop").attr("src", "./desktop/index.html");
         } else {
           var EncryptEnteredLogin = sjcl.encrypt(salt, this.value)
           console.log('Typed password: ' + EncryptEnteredLogin);
