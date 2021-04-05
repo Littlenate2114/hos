@@ -12,7 +12,7 @@ body{
 body {
     width:100%;
     height:100vh;
-    background-image: url("https://raw.githubusercontent.com/Littlenate2114/hos/tree/development/src/background.jpg");
+    background-image: url("https://raw.githubusercontent.com/Littlenate2114/hos/master/src/images/background.jpg");
     background-size:cover;
     background-position: center;
 }
