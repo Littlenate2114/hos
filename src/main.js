@@ -5,7 +5,7 @@ import App from './App.svelte';
 const app = new App({
 	target: document.body,
 	props: {
-		welcomeMessage: 'Welcome To HOS'
+		welcomeMessage: 'Welcome To HOS',
 	}
 });
 
